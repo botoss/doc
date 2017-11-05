@@ -53,7 +53,7 @@ value -- JSON of such format:
 {
   "connector-id": optional string, we haven't decided, do we really need it,
   "command": string, means user command,
-  "args": array of strings, which are args of command, possibly null or empty
+  "params": array of strings, which are args of command, possibly null or empty
 }
 ```
 
