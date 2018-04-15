@@ -8,3 +8,13 @@ It would be really nice to have for every project (both connectors and modules) 
   3. Finally, it executes shell script, which deploys docker image.
 
 **TODO**: run tests for every pull request and display its status on GitHub.
+
+Jenkins SSL certificate update:
+
+```
+# certbot renew --force-renewal &&
+    cd ~soft/keys &&
+    cp /etc/letsencrypt/live/*/fullchain.pem fullchain.pem &&
+    openssl rsa -in /etc/letsencrypt/live/*/privkey.pem -out privkey-rsa.pem &&
+    systemctl restart jenkins
+```
